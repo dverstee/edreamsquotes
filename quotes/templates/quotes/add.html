@@ -1,0 +1,10 @@
+<form action="{% url 'quotes:add' %}" method="post">
+{% csrf_token %}
+  Quote: <input type="text"  			name="quote"><br>
+  Quoted person : <input type="text" 	name="quotee"><br>
+  Quoted by : <input type="text" 		name="quoter"><br>
+  <input type="submit" value="Submit">
+</form>
+<li><a href="{% url 'quotes:index'%}">See quote</a></li>
+<li><a href="{% url 'quotes:logout'%}">Logout</a></li>
+

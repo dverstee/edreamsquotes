@@ -1,0 +1,12 @@
+{% if latest_quotes_list %}
+    <ul>
+    {% for question in latest_quotes_list %}
+        <a>{{ question.quote_text }} -- {{ question.quotee }} -- Quoted by :{{ question.quoter }} </a>
+        <br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<li><a href="{% url 'quotes:add'%}">Add quote</a></li>
+<li><a href="{% url 'quotes:logout'%}">Logout</a></li>
